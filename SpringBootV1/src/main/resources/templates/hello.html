@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="/stylesheet.css"/>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+			setInterval("refreash();",3000);
+            function refreash(){
+                    $('#paragraph').load('hello.html #paragraph');
+            }
+            
+</script>
+
+
+</head>
+<body >
+	<div id="wrapper">
+		<div id="title_div">
+			<h1 class="title">Arrived SMS</h1>
+			<h2></h2>
+			<h2 class="title2">Send sms to a friend after
+							achieve the destination point of your adventure!</h2>
+			
+		
+		</div>
+		<div id="buttons">
+				<p class="button">button1</p>
+				<p class="button">button2</p>
+				<p class="button">button3</p>
+		</div>
+	</div>
+		<div id="division">
+		</div>
+		<div id="page_body" class="tmp">
+			<div id="body_one" class="body_divs">
+				<div class="menu_div">
+					<p class="menu_button">button1</p>
+					<p class="menu_button">button2</p>
+					<p class="menu_button">button3</p>
+					<p class="menu_button">button4</p>
+				</div>
+			</div>
+			<div id="body_two" class="body_divs">
+				<p id="paragraph" th:text="'Długosc geograficzna: ' + ${longitude} + ' szerokosc geograficzna:' + ${latitude} " />
+			</div>
+			<div id="body_three" class="body_divs"></div>
+		</div>
+
+<!-- <p th:text="'Długosc geograficzna: ' + ${longitude} + ' szerokosc geograficzna:' + ${latitude} " /> -->
+
+   
+	
+  
+    
+</body>
+</html>

@@ -5,18 +5,21 @@ import org.springframework.stereotype.Component;
 
 public class Location {
 
+	
+
 	private String longitude;
 	private String latitude;
-	
+	private String ipServer;
 	
 	public Location() {
 		super();
 	}
 
-	public Location(String longitude, String latitude) {
+	public Location(String longitude, String latitude,String ipServer) {
 		super();
 		this.longitude = longitude;
 		this.latitude = latitude;
+		this.ipServer = ipServer;
 	}
 
 	public String getLongitude() {
@@ -39,6 +42,14 @@ public class Location {
 
 	public void setLatitude(String latitude) {
 		this.latitude = latitude;
+	}
+
+	public String getIpServer() {
+		return ipServer;
+	}
+
+	public void setIpServer(String ipServer) {
+		this.ipServer = ipServer;
 	}
 	
 	

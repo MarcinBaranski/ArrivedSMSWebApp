@@ -54,6 +54,18 @@ div,p,h1,h2{
     border:red dashed 1px;
     font-size:x-large;
 }
+#ipServer{
+	color:white;
+	vertical-align:top;
+    display:table-cell;
+    text-align:right;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:10px;
+    border:red dashed 1px;
+    font-size:x-large;
+}
 .title{
 	color:#e9e9e9;
 	font-size:50px;

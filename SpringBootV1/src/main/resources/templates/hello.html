@@ -31,6 +31,9 @@
 				<p class="button">button2</p>
 				<p class="button">button3</p>
 		</div>
+		<div id="ipServer">
+				<p id="ipServer" th:text="'Adres IP: ' + ${ipServer}" /> 
+		</div>
 	</div>
 		<div id="division">
 		</div>
@@ -44,7 +47,8 @@
 				</div>
 			</div>
 			<div id="body_two" class="body_divs">
-				<p id="paragraph" th:text="'Długosc geograficzna: ' + ${longitude} + ' szerokosc geograficzna:' + ${latitude} " />
+				<p id="paragraph" th:text="'Długosc geograficzna: ' + ${longitude} " />
+				<p id="paragraph" th:text="'Szerokosc geograficzna:' + ${latitude} " />
 			</div>
 			<div id="body_three" class="body_divs"></div>
 		</div>

@@ -1,6 +1,5 @@
 package com.wat.springbootv;
 
-import org.springframework.stereotype.Component;
 
 
 public class Location {

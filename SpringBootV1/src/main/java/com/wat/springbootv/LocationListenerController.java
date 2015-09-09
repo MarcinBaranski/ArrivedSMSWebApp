@@ -36,7 +36,7 @@ public class LocationListenerController {
 		loc.setLatitude(location.getLatitude());
 		loc.setLongitude(location.getLongitude());
 		log.info("Lokalizacja : " + location);
-		locationStorage.setLocationSt(loc);
+		locationStorage.setLocation(loc);
 		return new ResponseEntity<String>(HttpStatus.OK);	
 	}
 

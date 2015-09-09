@@ -34,7 +34,7 @@ public class LocationShowController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String greeting(Model model) {
 		
-		Location loc = locationStorage.getLocationSt();
+		Location loc = locationStorage.getLocation();
 		if(loc.getLatitude()==null||loc.getLongitude()==null){
 			model.addAttribute("latitude", "Brak aktualnego po³o¿enia");
 			model.addAttribute("longitude", "Brak aktualnego po³o¿enia");

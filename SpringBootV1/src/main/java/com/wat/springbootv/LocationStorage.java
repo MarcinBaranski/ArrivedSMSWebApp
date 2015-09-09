@@ -8,18 +8,23 @@ import com.sun.org.glassfish.gmbal.NameValue;
 
 @Component
 public class LocationStorage {
-	
-	
-	 Location locationSt= new Location();
 
+	private LocationUpdateListener locationUpdateListener = new LocationUpdateListener();
+	private Location location = new Location();
 
-	public Location getLocationSt() {
-		return locationSt;
+	@Autowired
+	public LocationStorage(LocationUpdateListener locationUpdateListener) {
+		super();
+		this.locationUpdateListener = locationUpdateListener;
+	}
+	
+	public Location getLocation() {
+		return location;
 	}
 
-	public void setLocationSt(Location locationSt) {
-		System.out.println("setting location to: " + locationSt);
-		this.locationSt = locationSt;
+	public void setLocation(Location location) {
+		this.location = location;
+		locationUpdateListener.onLocationUpdate(location);
 	}
 
 }

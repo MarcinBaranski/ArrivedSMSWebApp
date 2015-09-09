@@ -35,16 +35,15 @@ public class LocationShowController {
 		if(loc.getLatitude()==null||loc.getLongitude()==null){
 			model.addAttribute("latitude", "Brak aktualnego po³o¿enia");
 			model.addAttribute("longitude", "Brak aktualnego po³o¿enia");
-			return "hello";
 		}else{
 			model.addAttribute("latitude", loc.getLatitude().toString());
 			model.addAttribute("longitude", loc.getLongitude().toString());
 			getServerIP();
 			model.addAttribute("ipServer", serverIP);
-			return "hello";
 		}
+		return "hello";
 	}
-
+	
 	public void getServerIP(){
 		InetAddress ip;
 		String hostname;

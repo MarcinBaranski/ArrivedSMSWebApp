@@ -3,12 +3,13 @@
 <head>
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link type="text/css" rel="stylesheet" href="/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>
-			setInterval("refreash();",3000);
-            function refreash(){
+			setInterval("refresh();",3000);
+            function refresh(){
+            	console.log("Refreshing location");
                     $('#paragraph').load('hello.html #paragraph');
             }
             

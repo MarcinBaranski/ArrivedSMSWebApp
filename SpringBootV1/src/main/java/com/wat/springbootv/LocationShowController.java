@@ -21,17 +21,20 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class LocationShowController {
 
 	String serverIP;
-	Location loc = new Location();
+//	Location loc = new Location();
+	private LocationStorage locationStorage;
 
 	@Autowired
 	public LocationShowController(LocationStorage locationStorage) {
 		super();
-		loc=locationStorage.getLocationSt();
+		this.locationStorage = locationStorage;
 	}
 
 	@ModelAttribute("loc")
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String greeting(Model model) {
+		
+		Location loc = locationStorage.getLocationSt();
 		if(loc.getLatitude()==null||loc.getLongitude()==null){
 			model.addAttribute("latitude", "Brak aktualnego po³o¿enia");
 			model.addAttribute("longitude", "Brak aktualnego po³o¿enia");

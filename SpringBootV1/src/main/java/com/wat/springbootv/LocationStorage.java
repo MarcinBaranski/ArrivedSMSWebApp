@@ -6,10 +6,6 @@ import org.springframework.stereotype.Component;
 
 import com.sun.org.glassfish.gmbal.NameValue;
 
-
-
-
-
 @Component
 public class LocationStorage {
 	
@@ -22,6 +18,7 @@ public class LocationStorage {
 	}
 
 	public void setLocationSt(Location locationSt) {
+		System.out.println("setting location to: " + locationSt);
 		this.locationSt = locationSt;
 	}
 

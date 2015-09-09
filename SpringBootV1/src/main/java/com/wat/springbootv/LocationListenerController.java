@@ -16,15 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LocationListenerController {
 
-	Location loc =new Location();
+//	Location loc =new Location();
+	private LocationStorage locationStorage;
 
 	@Autowired
 	public LocationListenerController(LocationStorage locationStorage) {
 		super();
-
-		if(loc!=null){
-			locationStorage.setLocationSt(loc);
-		}
+		this.locationStorage = locationStorage;
 	}
 
 	private Logger log = LoggerFactory.getLogger(getClass());
@@ -34,10 +32,11 @@ public class LocationListenerController {
 	@RequestMapping(value = "/locationListener", method = RequestMethod.POST)
 	public ResponseEntity<String> locationListener(@RequestBody Location location){
 
-		log.info("Lokalizacja : " + location);
+		Location loc = new Location();
 		loc.setLatitude(location.getLatitude());
 		loc.setLongitude(location.getLongitude());
-
+		log.info("Lokalizacja : " + location);
+		locationStorage.setLocationSt(loc);
 		return new ResponseEntity<String>(HttpStatus.OK);	
 	}
 

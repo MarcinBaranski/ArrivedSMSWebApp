@@ -42,6 +42,21 @@ div,p,h1,h2{
 	display:inline;
 	
 }
+.paragraph1{
+	display:inline;
+	display:table-cell;
+    text-align:left;
+}
+.paragraph2{
+	display:inline;
+	display:table-cell;
+    text-align:left;
+}
+#wspolrzedne{
+	display:table-cell;
+    text-align:left;
+    position:absolute;
+}
 #buttons{
 	color:white;
 	vertical-align:top;

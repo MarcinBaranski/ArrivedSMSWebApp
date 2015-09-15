@@ -4,20 +4,23 @@
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-<script>
-			setInterval("refresh();",3000);
-            function refresh(){
-            	console.log("Refreshing location");
-                    $('#paragraph').load('hello.html #paragraph');
-            }
+<!-- 	<script type="text/javascript"></script> -->
+<script type="text/javascript" src="/js/external/jquery-1.11.2.js"></script>
+    <script src="/js/external/sockjs-0.3.min.js"></script>
+    <script src="/js/external/stomp.js"></script>
+	<script src="/js/location-socket.js"></script>
+<!-- <script> -->
+<!-- // 			setInterval("refresh();",3000); -->
+<!-- //             function refresh(){ -->
+<!-- //             	console.log("Refreshing location"); -->
+<!-- //                     $('#paragraph').load('hello.html #paragraph'); -->
+<!-- //             } -->
             
-</script>
+<!-- </script> -->
 
 
 </head>
-<body >
+<body onload="connect()">
 	<div id="wrapper">
 		<div id="title_div">
 			<h1 class="title">Arrived SMS</h1>
@@ -45,11 +48,21 @@
 					<p class="menu_button">button2</p>
 					<p class="menu_button">button3</p>
 					<p class="menu_button">button4</p>
+					 <button id="connect" onclick="connect();">Connect</button>
+					 <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
 				</div>
 			</div>
 			<div id="body_two" class="body_divs">
-				<p id="paragraph" th:text="'Długosc geograficzna: ' + ${longitude} " />
-				<p id="paragraph" th:text="'Szerokosc geograficzna:' + ${latitude} " />
+				<div align="left" class="wspolrzedne">
+					<p class="paragraph1" id="paragraph1" th:text="'Długosc geograficzna:  ' " />
+					<p class="paragraph1" id="paragraph12" th:text="''" />
+				</div>
+				<div align="left" class="wspolrzedne">
+					<p class="paragraph2" id="paragraph2" th:text="'Szerokosc geograficzna:  ' " />
+					<p class="paragraph2" id="paragraph21" th:text="''" />
+				</div>
+<!-- 				<p id="paragraph2" th:text="'Szerokosc geograficzna:' + ${latitude} " /> -->
+<!-- 				<p id="response"></p> -->
 			</div>
 			<div id="body_three" class="body_divs"></div>
 		</div>

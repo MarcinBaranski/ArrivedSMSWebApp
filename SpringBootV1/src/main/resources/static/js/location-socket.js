@@ -3,8 +3,6 @@
         function setConnected(connected) {
             document.getElementById('connect').disabled = connected;
             document.getElementById('disconnect').disabled = !connected;
-            document.getElementById('conversationDiv').style.visibility = connected ? 'visible' : 'hidden';
-            document.getElementById('response').innerHTML = '';
         }
 
         function connect() {
@@ -42,5 +40,6 @@
             var p = document.createElement('p');
             p.style.wordWrap = 'break-word';
             p.appendChild(document.createTextNode(message.longitude));
-            response.appendChild(p);
+            paragraph12.innerHTML = "" + message.longitude;
+            paragraph21.innerHTML = "" + message.latitude;
         }

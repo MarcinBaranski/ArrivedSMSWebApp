@@ -10,13 +10,6 @@ div,p,h1,h2{
 	border:0;
 	
 }
-/* span{ */
-/* 	display: inline-block; */
-/*  	vertical-align:text-bottom; */
-/*   	line-height: normal; */
-/*   	font-size:45px; */
-/*   	color:white; */
-/* } */
 #wrapper{
 	background:url(../index_bg.jpg);
 	height:45%;

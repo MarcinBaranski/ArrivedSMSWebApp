@@ -33,15 +33,15 @@ public class LocationShowController {
 	public String greeting(Model model) {
 		
 		Location loc = locationStorage.getLocation();
-		if(loc.getLatitude()==null||loc.getLongitude()==null){
-			model.addAttribute("latitude", "Brak aktualnego po這瞠nia");
-			model.addAttribute("longitude", "Brak aktualnego po這瞠nia");
-		}else{
-			model.addAttribute("latitude", loc.getLatitude().toString());
-			model.addAttribute("longitude", loc.getLongitude().toString());
-			getServerIP();
-			model.addAttribute("ipServer", serverIP);
-		}
+//		if(loc.getLatitude()==null||loc.getLongitude()==null){
+//			model.addAttribute("latitude", "Brak aktualnego po這瞠nia");
+//			model.addAttribute("longitude", "Brak aktualnego po這瞠nia");
+//		}else{
+//			model.addAttribute("latitude", loc.getLatitude().toString());
+//			model.addAttribute("longitude", loc.getLongitude().toString());
+//			getServerIP();
+//			model.addAttribute("ipServer", serverIP);
+//		}
 		return "hello";
 	}
 	

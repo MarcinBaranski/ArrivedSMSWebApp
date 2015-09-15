@@ -4,20 +4,11 @@
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
-<!-- 	<script type="text/javascript"></script> -->
-<script type="text/javascript" src="/js/external/jquery-1.11.2.js"></script>
+    
+	<script type="text/javascript" src="/js/external/jquery-1.11.2.js"></script>
     <script src="/js/external/sockjs-0.3.min.js"></script>
     <script src="/js/external/stomp.js"></script>
 	<script src="/js/location-socket.js"></script>
-<!-- <script> -->
-<!-- // 			setInterval("refresh();",3000); -->
-<!-- //             function refresh(){ -->
-<!-- //             	console.log("Refreshing location"); -->
-<!-- //                     $('#paragraph').load('hello.html #paragraph'); -->
-<!-- //             } -->
-            
-<!-- </script> -->
-
 
 </head>
 <body onload="connect()">
@@ -27,8 +18,7 @@
 			<h2></h2>
 			<h2 class="title2">Send sms to a friend after
 							achieve the destination point of your adventure!</h2>
-			
-		
+
 		</div>
 		<div id="buttons">
 				<p class="button">button1</p>
@@ -55,23 +45,18 @@
 			<div id="body_two" class="body_divs">
 				<div align="left" class="wspolrzedne">
 					<p class="paragraph1" id="paragraph1" th:text="'Długosc geograficzna:  ' " />
-					<p class="paragraph1" id="paragraph12" th:text="''" />
+					<p class="paragraph1" id="paragraph12" th:text="'Brak aktualnego położenia'" />
 				</div>
 				<div align="left" class="wspolrzedne">
 					<p class="paragraph2" id="paragraph2" th:text="'Szerokosc geograficzna:  ' " />
-					<p class="paragraph2" id="paragraph21" th:text="''" />
+					<p class="paragraph2" id="paragraph21" th:text="'Brak aktualnego położenia'" />
 				</div>
-<!-- 				<p id="paragraph2" th:text="'Szerokosc geograficzna:' + ${latitude} " /> -->
-<!-- 				<p id="response"></p> -->
 			</div>
 			<div id="body_three" class="body_divs"></div>
 		</div>
 
-<!-- <p th:text="'Długosc geograficzna: ' + ${longitude} + ' szerokosc geograficzna:' + ${latitude} " /> -->
 
-   
-	
-  
-    
+
+
 </body>
 </html>

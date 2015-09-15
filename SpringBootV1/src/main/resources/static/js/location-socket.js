@@ -1,8 +1,10 @@
         var stompClient = null;
 
         function setConnected(connected) {
-            document.getElementById('connect').disabled = connected;
-            document.getElementById('disconnect').disabled = !connected;
+//        	document.getElementById('connect').style.visibility = "hidden";
+//        	document.getElementById('connect').disabled = connected;
+//            document.getElementById('disconnect').style.visibility = "hidden";
+//            document.getElementById('disconnect').disabled = !connected;
         }
 
         function connect() {
@@ -23,10 +25,10 @@
         }
 
         function showGreeting(message) {
-            var response = document.getElementById('response');
-            var p = document.createElement('p');
-            p.style.wordWrap = 'break-word';
-            p.appendChild(document.createTextNode(message.longitude));
+//            var response = document.getElementById('response');
+//            var p = document.createElement('p');
+//            p.style.wordWrap = 'break-word';
+//            p.appendChild(document.createTextNode(message.longitude));
             paragraph12.innerHTML = "" + message.longitude;
             paragraph21.innerHTML = "" + message.latitude;
         }

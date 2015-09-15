@@ -33,6 +33,8 @@ public class LocationShowController {
 	public String greeting(Model model) {
 		
 		Location loc = locationStorage.getLocation();
+		getServerIP();
+		model.addAttribute("ipServer", serverIP);
 //		if(loc.getLatitude()==null||loc.getLongitude()==null){
 //			model.addAttribute("latitude", "Brak aktualnego po³o¿enia");
 //			model.addAttribute("longitude", "Brak aktualnego po³o¿enia");

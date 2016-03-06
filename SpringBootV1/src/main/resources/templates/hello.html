@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head >
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
@@ -9,9 +9,21 @@
     <script src="/js/external/sockjs-0.3.min.js"></script>
     <script src="/js/external/stomp.js"></script>
 	<script src="/js/location-socket.js"></script>
-	<script src="/js/googleMaps.js"></script>
+	<script src="/js/google-maps.js"></script>
+	
+	<!--  Google maps api -->
+	
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhtrzBPmmV-IhSWXeGyao7gfJtHG76jQg&amp;sensor=FALSE">
+</script>
+	
+	<script type="text/javascript">
+	function start() {
+		  connect();
+		  initialize();
+		}
+	</script>
 </head>
-<body onload="connect()">
+<body onload="start()">
 	<div id="wrapper">
 		<div id="title_div">
 			<h1 class="title">Arrived SMS</h1>
@@ -51,6 +63,8 @@
 					<p class="paragraph2" id="paragraph2" th:text="'Szerokosc geograficzna:  ' " />
 					<p class="paragraph2" id="paragraph21" th:text="'Brak aktualnego położenia'" />
 				</div>
+				<div id="map-canvas" style="width:300px; height:300px;"></div>
+				
 			</div>
 			<div id="body_three" class="body_divs"></div>
 		</div>

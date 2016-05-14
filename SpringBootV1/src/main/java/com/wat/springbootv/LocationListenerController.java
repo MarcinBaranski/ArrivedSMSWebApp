@@ -35,7 +35,8 @@ public class LocationListenerController {
 		loc.setLatitude(location.getLatitude());
 		loc.setLongitude(location.getLongitude());
 		loc.setgForce(location.getgForce());
-		log.info("Lokalizacja : " + location.getLatitude()+ " " + location.getLongitude()+ " Sila grawitacyjna: " + location.getgForce());
+		loc.setLogin(location.getLogin());
+		log.info("Lokalizacja : " + location.getLatitude()+ " " + location.getLongitude()+ " Sila grawitacyjna: " + location.getgForce()+ " Login:" + location.getLogin());
 		locationStorage.setLocation(loc);
 		return new ResponseEntity<String>(HttpStatus.OK);	
 	}

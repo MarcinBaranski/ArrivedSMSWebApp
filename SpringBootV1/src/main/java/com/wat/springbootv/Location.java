@@ -10,6 +10,7 @@ public class Location {
 	private String latitude;
 	private String ipServer;
 	private String gForce;
+	private String login;
 	
 	public Location() {
 		super();
@@ -21,6 +22,7 @@ public class Location {
 		this.latitude = latitude;
 		this.ipServer = ipServer;
 		this.gForce = gForce;
+		this.login = login;
 	}
 
 	public String getLongitude() {
@@ -59,6 +61,14 @@ public class Location {
 
 	public void setgForce(String gForce) {
 		this.gForce = gForce;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	
 	

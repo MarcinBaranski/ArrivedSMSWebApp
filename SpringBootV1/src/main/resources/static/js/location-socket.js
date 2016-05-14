@@ -43,6 +43,7 @@
             globalVariableLatitude={example_attribute:"" + message.latitude};
             globalVariableLongitude={example_attribute:"" + message.longitude};
             globalVariableGForce={example_attribute:"" + message.gForce};
+            globalVariableLogin={example_attribute:"" + message.login};
             
             //Interwal do odswiezania wspolrzednych markera 7000 = 7s
             setInterval(doSomething(),5000);
